@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>clipPath</title>
+  </head>
+  <body>
+    <svg>
+      <defs>
+        <clipPath id="rectClip">
+          <rect x="100" y="100" width="100" height="90" fill="none" stroke="black"></rect>
+          <circle cx="300" cy="150" r="60" fill="none"></circle>
+          <path d="M100 50L150,50L100,20L40,60Z" fill="none"></path>
+        </clipPath>
+      </defs>
+      <image x="0" y="0" width="480" height="270" xlink:href="./289kb.jpeg" style="clip-path: url(#rectClip)"></image>
+      <image x="0" y="0" width="480" height="270" xlink:href="./289kb.jpeg" opacity="0.2"></image>
+    </svg>
+    <br />
+    -----------------------------------------------
+    <br />
+    <svg>
+      <defs>
+        <clipPath id="rectClip" clipPathUnits="objectBoundingBox">
+          <rect x=".30" y=".300" width=".200" height=".40" fill="none" stroke="black"></rect>
+          <circle cx=".300" cy=".150" r=".090" fill="none"></circle>
+        </clipPath>
+      </defs>
+
+      <image x="0" y="0" width="480" height="270" xlink:href="./289kb.jpeg" style="clip-path: url(#rectClip)"></image>
+      <image x="0" y="0" width="480" height="270" xlink:href="./289kb.jpeg" opacity="0.2"></image>
+    </svg>
+  </body>
+</html>

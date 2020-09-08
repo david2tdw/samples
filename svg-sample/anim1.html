@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>test</title>
+  </head>
+  <body>
+    <svg>
+      <rect x="10" y="10" width="200" height="25" stroke="black" fill="none">
+        <animate
+          id="c1"
+          attributeName="width"
+          attributeType="XML"
+          from="200"
+          to="20"
+          begin="0s"
+          dur="5s"
+          fill="freeze"
+        ></animate>
+      </rect>
+      <circle cx="120" cy="60" r="10" stroke="black" fill="none">
+        <animate attributeName="r" attributeType="XML" begin="c1.begin+3s" from="20" to="40" dur="4s"></animate>
+      </circle>
+    </svg>
+  </body>
+</html>

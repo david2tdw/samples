@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>test</title>
+    <style>
+      .starStyle {
+        animation-name: starAnim;
+        animation-duration: 2s;
+        animation-iteration-count: 4;
+        animation-direction: alternate; /*  动画应该轮流反向播放。 */
+        animation-timing-function: ease;
+        animation-play-state: running; /*  animation-play-state 属性规定动画正在运行还是暂停。 */
+      }
+      @keyframes starAnim {
+        0% {
+          fill: red;
+          transform: translate(100px, 100px);
+        }
+        50% {
+          fill: green;
+          transform: translate(120px, 100px);
+        }
+        100% {
+          fill: blue;
+          transform: translate(100px, 120px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="500" height="400" style="border: 1px solid green">
+      <defs>
+        <g id="starDef">
+          <circle cx="50" cy="50" r="10"></circle>
+        </g>
+      </defs>
+      <use id="star" class="starStyle" xlink:href="#starDef" fill="#008000"></use>
+    </svg>
+  </body>
+</html>

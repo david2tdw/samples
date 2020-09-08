@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>test</title>
+  </head>
+  <body>
+    <svg>
+      <path id="movePath" d="M50,135C100,25 150,225 200,125" fill="none" stroke="black"></path>
+      <rect x="-10" y="-10" width="20" height="20" style="fill: #ff9; stroke: black">
+        <animateMotion dur="6s" fill="freeze" rotate="auto">
+          <mPath xlink:href="#movePath"></mPath>
+        </animateMotion>
+      </rect>
+    </svg>
+  </body>
+</html>
