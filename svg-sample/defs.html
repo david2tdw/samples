@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+  </head>
+  <body>
+    <svg>
+      <defs>
+        <g id="Port">
+          <circle style="fill: inherit" r="10" />
+        </g>
+      </defs>
+
+      <use x="50" y="50" xlink:href="#Port" style="fill: blue" />
+
+      <g id="gPort">
+        <circle style="fill: inherit" r="10" />
+      </g>
+      <use x="150" y="50" xlink:href="#gPort" class="classA" />
+    </svg>
+  </body>
+</html>
+<!-- <defs></defs>包含的svg内容不会被浏览器解析。 -->
+<!-- <g></g>里面的内容会被浏览器直接运行 -->

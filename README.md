@@ -1,4 +1,4 @@
-### vue/test-toast vue/toast-component
+### toast-component
 开发， 发布一个组件。
 
 ### d3-sample
